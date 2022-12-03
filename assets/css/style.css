@@ -1,0 +1,18 @@
+/* header styles */
+.headerBar {
+    display: flex;
+    background: black;
+    justify-content: space-between;
+    font-size: 25px;
+    color:aqua;
+    padding: 25px;
+    margin: 20px;
+    
+}
+
+/* button styles */
+button {
+    background-color: aqua;
+    color:black;
+    font-size: 25px;
+}
