@@ -1,3 +1,4 @@
+var introCard = document.querySelector(".introCard")
 var startButton = document.querySelector("#startButton");
 var timerHead = document.querySelector("#headerTimer");
 var timerCount = 120; // set initial timer to 2 minutes
@@ -6,6 +7,10 @@ var timerCount = 120; // set initial timer to 2 minutes
 function startQuiz() {
     //calls startTimer function
     startTimer();
+    // hides the intro card and start button
+    introCard.setAttribute("class", "hide");
+    startButton.setAttribute("id", "hide");
+    startButton.setAttribute("class", "hide");
 
 }
 

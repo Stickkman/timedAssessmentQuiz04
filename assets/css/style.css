@@ -1,6 +1,10 @@
 /* header styles */
 
 
+body {
+   background-color: black; 
+}
+
 /* header style */
 .headerBar {
     display: flex;
@@ -46,6 +50,8 @@ button {
     color: black;
     font-size: 24px;
     font-weight: bolder;
-    
+}
 
+.hide {
+    display: none;
 }
