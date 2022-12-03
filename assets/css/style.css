@@ -1,4 +1,7 @@
 /* header styles */
+
+
+/* header style */
 .headerBar {
     display: flex;
     background: black;
@@ -15,4 +18,34 @@ button {
     background-color: aqua;
     color:black;
     font-size: 25px;
+}
+/* banner text style */
+.mainText {
+    display: flex;
+    justify-content: space-around;
+    background-color: black;
+    font-size: 29px;
+    color:aqua;
+
+}
+
+.introCard {
+    display: flex;
+    text-align: center;
+    background-color: black;
+    padding: 20px;
+    color: aqua;
+    font-size: 24px;
+}
+
+#startButton {
+    display: flex;
+    margin:auto;
+    background-color: aqua;
+    padding: 20px;
+    color: black;
+    font-size: 24px;
+    font-weight: bolder;
+    
+
 }
