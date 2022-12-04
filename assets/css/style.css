@@ -1,8 +1,14 @@
 /* header styles */
+*, *::before, *::after {
+box-sizing: border-box;
+}
 
-
+/* body style */
 body {
-   background-color: black; 
+  
+    background-color: black; 
+    
+  
 }
 
 /* header style */
@@ -23,6 +29,16 @@ button {
     color:black;
     font-size: 25px;
 }
+
+.buttons {
+    background-color: black;
+    color: aqua;
+    border: 3px solid black;
+    border-radius: 3px;
+    padding: 10px;
+    outline-style:inset;
+
+}
 /* banner text style */
 .mainText {
     display: flex;
@@ -32,16 +48,19 @@ button {
     color:aqua;
 
 }
-
+/* first card/intro style */
 .introCard {
     display: flex;
+    justify-content:center;
     text-align: center;
     background-color: black;
     padding: 20px;
     color: aqua;
     font-size: 24px;
+    margin:auto;
 }
 
+/* start button style */
 #startButton {
     display: flex;
     margin:auto;
@@ -52,6 +71,33 @@ button {
     font-weight: bolder;
 }
 
+/* hide element class */
 .hide {
     display: none;
+}
+
+/* background container style */
+.container {
+   
+    margin:auto;
+    padding: 18px;
+    border-radius: 10px;
+    width: 800px;
+    max-width: 80%;
+    background-color: rgb(23, 190, 190);
+    justify-content: center;
+    align-content: center;
+    
+   
+   
+    
+}
+/* button grid stlye */
+.buttonGrid { 
+    /* orgainizes button choices */
+    display:grid;
+    gap: 8px;
+    margin: 15px 8px;
+    
+
 }

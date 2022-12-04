@@ -11,6 +11,7 @@ function startQuiz() {
     introCard.setAttribute("class", "hide");
     startButton.setAttribute("id", "hide");
     startButton.setAttribute("class", "hide");
+    
 
 }
 
@@ -26,14 +27,16 @@ function startTimer(){
 
         }
             else {
-                timer.textContent = timerCount; question1();
+                timer.textContent = timerCount; questions();
             }
         
     },1000); // 1 second interval
 }
 
-function question1() {
+function questions() {
     console.log("questions start call");
+    
+    
 }
 
 
