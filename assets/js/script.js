@@ -2,15 +2,17 @@ var introCard = document.querySelector(".introCard")
 var startButton = document.querySelector("#startButton");
 var timerHead = document.querySelector("#headerTimer");
 var timerCount = 120; // set initial timer to 2 minutes
+var questionCard = document.querySelector("#questionContainer") 
 
 // startQuiz function
 function startQuiz() {
     //calls startTimer function
     startTimer();
-    // hides the intro card and start button
-    introCard.setAttribute("class", "hide");
-    startButton.setAttribute("id", "hide");
-    startButton.setAttribute("class", "hide");
+   
+    introCard.setAttribute("class", "hide"); //hides introcard
+    startButton.setAttribute("id", "hide"); //hides startbutton
+    startButton.setAttribute("class", "hide"); //hides startbutton
+    questionCard.setAttribute("class", "visible"); //reveals first set of questions
     
 
 }
@@ -35,7 +37,7 @@ function startTimer(){
 
 function questions() {
     console.log("questions start call");
-    
+
     
 }
 

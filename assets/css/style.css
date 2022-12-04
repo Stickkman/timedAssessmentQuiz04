@@ -29,7 +29,15 @@ button {
     color:black;
     font-size: 25px;
 }
+/* Hover styles  */
+#startButton:hover {
+    border-radius: 10px;
+    outline-style:dashed;
+    color: limegreen;
+    
+}
 
+/* multiple choice option styles */
 .buttons {
     background-color: black;
     color: aqua;
@@ -37,8 +45,17 @@ button {
     border-radius: 3px;
     padding: 10px;
     outline-style:inset;
-
 }
+/* hover stlyes */
+.buttons:hover {
+    border-radius: 10px;
+    outline-style:dashed;
+    color:chartreuse;
+    
+}
+
+  
+
 /* banner text style */
 .mainText {
     display: flex;
