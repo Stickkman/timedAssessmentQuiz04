@@ -64,7 +64,7 @@ function renderQuestion() {
  
             if (element.value == "correct") //if correct alert user and add to correct answer total
             {                                                                   
-                e.stopPropagation();alert("Correct Answer"); correctAnswers++; 
+                e.stopPropagation();alert("Correct Answer! 😊"); correctAnswers++; 
                   element.setAttribute("value", "correct");renderQuestion2();
             
                 
@@ -72,7 +72,7 @@ function renderQuestion() {
             else if (element.value =="wrong"){ // if wrong answer, alert user and add to wrong answer total;
                 console.log("Wrong Answer Chosen");  //test
                 //change value
-                alert("Wrong Answer"); wrongAnswers++; element.setAttribute("value", "reset");renderQuestion2();
+                alert("Wrong Answer\n 10 Seconds Lost! ☹️"); wrongAnswers++; element.setAttribute("value", "reset");renderQuestion2();
                 // if wrong subtract 10 seconds from time
                 timerCount = timerCount -10;
  
@@ -105,13 +105,13 @@ function renderQuestion() {
 			
             if (element.value == "correct") //if correct answer chosen, alert user and add to correct answer total
             {   
-                e.stopPropagation();alert("Correct Answer"); correctAnswers++;  element.setAttribute("value2", "correct");renderQuestion3();
+                e.stopPropagation();alert("Correct Answer! 😊"); correctAnswers++;  element.setAttribute("value2", "correct");renderQuestion3();
             
                 
             }
             else { // if wrong answer, alert user and add to wrong answer total;
                 console.log("Wrong Answer Chosen");  //test
-                alert("Wrong Answer"); wrongAnswers++; element.setAttribute("value", "reset");renderQuestion3();
+                alert("Wrong Answer\n 10 Seconds Lost! ☹️"); wrongAnswers++; element.setAttribute("value", "reset");renderQuestion3();
                 // if wrong subtract time
                 timerCount = timerCount -10;
  
@@ -139,13 +139,13 @@ function renderQuestion() {
 			
             if (element.textContent == "<button>This is a button</button>") //if correct answer chosen, alert user and add to correct answer total
             {   
-                e.stopPropagation();alert("Correct Answer"); correctAnswers++;  element.setAttribute("value2", "reset");renderQuestion4();
+                e.stopPropagation();alert("Correct Answer! 😊"); correctAnswers++;  element.setAttribute("value2", "reset");renderQuestion4();
             
                 
             }
             else { // if wrong answer, alert user and add to wrong answer total;
                 console.log("Wrong Answer Chosen");  //test
-                alert("Wrong Answer"); wrongAnswers++; element.setAttribute("value", "reset");renderQuestion4();
+                alert("Wrong Answer\n 10 Seconds Lost! ☹️"); wrongAnswers++; element.setAttribute("value", "reset");renderQuestion4();
                 timerCount = timerCount -10;
  
             } return;
@@ -178,13 +178,13 @@ function renderQuestion() {
 			
             if (element.textContent == "Not equal to") //if correct answer chosen, alert user and add to correct answer total
             {   
-                e.stopPropagation();alert("Correct Answer"); correctAnswers++;  element.setAttribute("value2", "reset");renderQuestion5();
+                e.stopPropagation();alert("Correct Answer! 😊"); correctAnswers++;  element.setAttribute("value2", "reset");renderQuestion5();
             
                 
             }
             else { // if wrong answer, alert user and add to wrong answer total;
                 console.log("Wrong Answer Chosen");  //test
-                alert("Wrong Answer"); wrongAnswers++; element.setAttribute("value", "reset");renderQuestion5();
+                alert("Wrong Answer\n 10 Seconds Lost! ☹️"); wrongAnswers++; element.setAttribute("value", "reset");renderQuestion5();
                 timerCount = timerCount -10;
  
             } return;
@@ -212,13 +212,13 @@ function renderQuestion() {
 			
             if (element.textContent == "They are all HTML elements") //if correct answer chosen, alert user and add to correct answer total
             {   
-                e.stopPropagation();alert("Correct Answer"); correctAnswers++;  element.setAttribute("value2", "reset");finishQuiz();
+                e.stopPropagation();alert("Correct Answer! 😊"); correctAnswers++;  element.setAttribute("value2", "reset");finishQuiz();
             
                 
             }
             else { // if wrong answer, alert user and add to wrong answer total;
                 console.log("Wrong Answer Chosen");  //test
-                alert("Wrong Answer"); wrongAnswers++; element.setAttribute("value", "reset");finishQuiz();
+                alert("Wrong Answer\n 10 Seconds Lost! ☹️"); wrongAnswers++; element.setAttribute("value", "reset");finishQuiz();
                 timerCount = timerCount -10;
  
             } return;
