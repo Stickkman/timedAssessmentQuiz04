@@ -37,6 +37,12 @@ button {
     
 }
 
+#saveInfoButton:hover {
+    border-radius: 12px;
+    outline-style: dashed;
+    color: limegreen;
+}
+
 /* multiple choice option styles */
 .buttons {
     background-color: black;
@@ -124,22 +130,40 @@ button {
 }
 
 #saveInfoButton{
-    display:flex;
-    margin: auto;
+    display:inline-flex;
+    margin: 10px;
     background-color: black;
     color: aqua;
     font-size: 33px;
     border-radius: 5px;
-    align-content: center;
+    
     justify-content:center;
     border-style: inset;
+
+}
+
+#userInfo{
+    display:flex;
+    background-color: black;
+    border-radius: 7px;
+    justify-content: center;
+    color: aqua;
+    padding:20px;
+    margin: auto;
+    border-style:dotted;
+    border-color:greenyellow;
     
-
-
-
     
+}
 
-
+#name{
+  font-size: 20px;
+  height: 25px;  
+}
+#nameField{
+    display:flex;
+    padding: 15px;
+    justify-content:center;
 
 }
 

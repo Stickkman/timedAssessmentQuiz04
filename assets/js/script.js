@@ -1,20 +1,28 @@
+// intro display
 var introCard = document.querySelector(".introCard")
+// selector for start button
 var startButton = document.querySelector("#startButton");
+// timer selector 
 var timerHead = document.querySelector("#headerTimer");
+// global timer variable 
 var timerCount = 60; // set initial timer to 2 minutes
+//question card selector
 var questionCard = document.querySelector("#questionContainer"); 
+// variable to select container to clear
 var endClear = document.querySelector(".container");
 // keeps track of correct answers
 var correctAnswers = 0;
-//keeps track of wrong answers
+// keeps track of wrong answers
 var wrongAnswers = 0;
-
+// show / hide selectors 
 var questionDisplay = document.querySelector("#question");
 var choiceDisplay = document.querySelector('#choiceButtons');
-
+//end screen container selector
 var finishContainer = document.querySelector("#finalContainer");
-
+// save info button selector
 var finalButton = document.querySelector("#saveInfoButton");
+// selector for final score 
+var scoreDisplay = document.querySelector("#userInfo");
 
 // array of questions
 var questions = [ 
@@ -49,7 +57,7 @@ var answerChoices =[
 	'They are all HTML elements'
 	
 ]
-// populates question
+// populates initial question
 function renderQuestion() {
     console.log("questions start call"); //test
         
@@ -83,11 +91,8 @@ function renderQuestion() {
  
             } return;
             
-            
-          
-            
-            
-            //FORCE EVENT LISTENER TO ONLY RUN ONCE, FIXES DUPLICATE WINDOW ALERTS
+   
+            //FORCE EVENT LISTENER TO ONLY RUN ONCE, FIXES DUPLICATE WINDOW ALERTS - Important
 		}, { once: true }); 
     } 
     // render question 2
@@ -154,11 +159,7 @@ function renderQuestion() {
                 timerCount = timerCount -10;
  
             } return;
-            
-            
-          
-            
-            
+  
             
 		}, { once: true }); 
     }  
@@ -272,6 +273,13 @@ function startTimer(){
 
 // runs after timer runs out OR all questions answered
 function finishQuiz(){
+    
+    //math for score
+    var totalScore = correctAnswers * 20;
+    //inserts text and final score
+    scoreDisplay.innerText ="Your final score  " + totalScore + "%";
+
+
     //clear screen to display finish quiz screen
     endClear.setAttribute("class", "hide"); //reveals first set of questions
     finishContainer.setAttribute("class", "visible"); //reveals final screen container
