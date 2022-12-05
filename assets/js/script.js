@@ -1,7 +1,7 @@
 var introCard = document.querySelector(".introCard")
 var startButton = document.querySelector("#startButton");
 var timerHead = document.querySelector("#headerTimer");
-var timerCount = 120; // set initial timer to 2 minutes
+var timerCount = 60; // set initial timer to 2 minutes
 var questionCard = document.querySelector("#questionContainer"); 
 // keeps track of correct answers
 var correctAnswers = 0;
@@ -56,21 +56,25 @@ function renderQuestion() {
         b3.textContent = answerChoices[2];
         b4.textContent = answerChoices[3];
         
-        choiceDisplay.addEventListener("click", (e)=>{ ///this is WHERE I LEFT LEFT
-            e.stopPropagation;
+        choiceDisplay.addEventListener("click", (e)=>{  // event listener to capture which button was pressed
+            e.stopPropagation; // prevent multiple captures
             var element = e.target; // assign var element to target value
             console.log(element);  // test
 
  
-            if (element.value == "correct") //if correct answer chosen, alert user and add to correct answer total
-            {   
-                e.stopPropagation();alert("Correct Answer"); correctAnswers++;  element.setAttribute("value", "correct");renderQuestion2();
+            if (element.value == "correct") //if correct alert user and add to correct answer total
+            {                                                                   
+                e.stopPropagation();alert("Correct Answer"); correctAnswers++; 
+                  element.setAttribute("value", "correct");renderQuestion2();
             
                 
             }
             else if (element.value =="wrong"){ // if wrong answer, alert user and add to wrong answer total;
                 console.log("Wrong Answer Chosen");  //test
+                //change value
                 alert("Wrong Answer"); wrongAnswers++; element.setAttribute("value", "reset");renderQuestion2();
+                // if wrong subtract 10 seconds from time
+                timerCount = timerCount -10;
  
             } return;
             
@@ -78,13 +82,13 @@ function renderQuestion() {
           
             
             
-            
+            //FORCE EVENT LISTENER TO ONLY RUN ONCE, FIXES DUPLICATE WINDOW ALERTS
 		}, { once: true }); 
     } 
-
+    // render question 2
     function renderQuestion2() {
     console.log("questions2 start call"); //test
-        
+        //update question and answer choices
     questionDisplay.innerText = questions[1];
 
         {
@@ -108,17 +112,14 @@ function renderQuestion() {
             else { // if wrong answer, alert user and add to wrong answer total;
                 console.log("Wrong Answer Chosen");  //test
                 alert("Wrong Answer"); wrongAnswers++; element.setAttribute("value", "reset");renderQuestion3();
+                // if wrong subtract time
+                timerCount = timerCount -10;
  
             } return;
-            
-            
-          
-            
-            
-            
+    
 		}, { once: true }); 
     }  
-	}  
+	}  // populate next question set
 	function renderQuestion3() {
     console.log("questions3 start call"); //test
         
@@ -145,6 +146,7 @@ function renderQuestion() {
             else { // if wrong answer, alert user and add to wrong answer total;
                 console.log("Wrong Answer Chosen");  //test
                 alert("Wrong Answer"); wrongAnswers++; element.setAttribute("value", "reset");renderQuestion4();
+                timerCount = timerCount -10;
  
             } return;
             
@@ -156,7 +158,7 @@ function renderQuestion() {
 		}, { once: true }); 
     }  
 	}  
-	
+	// next question
 	function renderQuestion4() {
     console.log("questions4 start call"); //test
         
@@ -183,18 +185,14 @@ function renderQuestion() {
             else { // if wrong answer, alert user and add to wrong answer total;
                 console.log("Wrong Answer Chosen");  //test
                 alert("Wrong Answer"); wrongAnswers++; element.setAttribute("value", "reset");renderQuestion5();
+                timerCount = timerCount -10;
  
             } return;
-            
-            
-          
-            
-            
-            
+    
 		}, { once: true }); 
     }  
 	} 
-	
+	// final question
 	function renderQuestion5() {
     console.log("questions5 start call"); //test
         
@@ -221,6 +219,7 @@ function renderQuestion() {
             else { // if wrong answer, alert user and add to wrong answer total;
                 console.log("Wrong Answer Chosen");  //test
                 alert("Wrong Answer"); wrongAnswers++; element.setAttribute("value", "reset");finishQuiz();
+                timerCount = timerCount -10;
  
             } return;
             
@@ -232,16 +231,7 @@ function renderQuestion() {
 		}, { once: true }); 
     }  
 	} 
-       
 
-
-    // const b = document.createElement("button");
-    // b.innerHTML= answerChoices[0];
-    // choiceDisplay.appendChild(b);
-        // choiceDisplay.innerText = answerChoices[0];
-
-
-    
 }
 
 // startQuiz function
@@ -274,8 +264,6 @@ function startTimer(){
         
     },1000); // 1 second interval
 }
-
-
 
 // call startQuiz funciton when start button is pushed
 startButton.addEventListener("click", startQuiz);
