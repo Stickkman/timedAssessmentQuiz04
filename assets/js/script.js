@@ -3,6 +3,7 @@ var startButton = document.querySelector("#startButton");
 var timerHead = document.querySelector("#headerTimer");
 var timerCount = 60; // set initial timer to 2 minutes
 var questionCard = document.querySelector("#questionContainer"); 
+var endClear = document.querySelector(".container");
 // keeps track of correct answers
 var correctAnswers = 0;
 //keeps track of wrong answers
@@ -10,6 +11,10 @@ var wrongAnswers = 0;
 
 var questionDisplay = document.querySelector("#question");
 var choiceDisplay = document.querySelector('#choiceButtons');
+
+var finishContainer = document.querySelector("#finalContainer");
+
+var finalButton = document.querySelector("#saveInfoButton");
 
 // array of questions
 var questions = [ 
@@ -265,7 +270,30 @@ function startTimer(){
     },1000); // 1 second interval
 }
 
+// runs after timer runs out OR all questions answered
+function finishQuiz(){
+    //clear screen to display finish quiz screen
+    endClear.setAttribute("class", "hide"); //reveals first set of questions
+    finishContainer.setAttribute("class", "visible"); //reveals final screen container
+
+    finalButton.addEventListener("click", function(event) {
+        event.preventDefault(); // prevents page from refreshing
+
+        var name = document.querySelector("#name").value;
+        var score = document.querySelector("#score").value;
+
+            localStorage.setItem("name", name);
+            localStorage.setItem("score", score);
+    })
+    
+
+
+
+}
+
+
 // call startQuiz funciton when start button is pushed
 startButton.addEventListener("click", startQuiz);
+
 
 
