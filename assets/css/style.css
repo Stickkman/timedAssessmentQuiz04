@@ -7,8 +7,10 @@ box-sizing: border-box;
 body {
   
     background-color: black; 
-    
-  
+
+}
+#viewHighscores{
+    border-radius: 10px;
 }
 
 /* header style */
@@ -37,6 +39,11 @@ button {
     
 }
 
+#viewHighscores:hover {
+    outline-style: dashed;
+    color: limegreen;
+}
+
 #saveInfoButton:hover {
     border-radius: 12px;
     outline-style: dashed;
@@ -59,8 +66,6 @@ button {
     color:chartreuse;
     
 }
-
-  
 
 /* banner text style */
 .mainText {

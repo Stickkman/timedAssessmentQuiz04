@@ -230,11 +230,7 @@ function renderQuestion() {
                 timerCount = timerCount -10;
  
             } return;
-            
-            
-          
-            
-            
+
             
 		}, { once: true }); 
     }  
@@ -265,7 +261,9 @@ function startTimer(){
         timerHead.textContent = "Time left: " + timerCount;
         // runs timer while count is greater than or equal to zero
         if (timerCount == 0) {
-            clearInterval(timer);
+            clearInterval(timer); 
+            finishQuiz(); // if timer reaches 0 end quiz
+
 
         }
             else {
