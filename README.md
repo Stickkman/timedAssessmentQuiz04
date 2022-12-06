@@ -13,12 +13,12 @@ No installation required.
 
 ## Direct Link to Live Application
 
-[*Live Site Link*](https://stickkman.github.io/timedAssessmentQuiz04/)
+[*Timed Assessment Quiz*](https://stickkman.github.io/timedAssessmentQuiz04/)
 
 
 ## Usage
 
-Once the site is loaded, simply press the 'Start Quiz' button, then a 60 second timer will start.  There are a total of 5 questions all multiple choice.  For each wrong answer time will be deducted from the clock.  You will also be alerted if your answer is correct or not.  When the timer reaches zero or you have answered all the questions the game will end.  You will then be presented with your final score (20 points for each question), and given the opportunity to enter your name.  Once this is done, click the button to save your name and score, which will lead to the highscores screen.  From here you can go back to retry the quiz, or clear the scores.  Enjoy.
+Once the site is loaded, simply press the 'Start Quiz' button, then a 60 second timer will start.  There are a total of 5 questions all multiple choice.  For each wrong answer time will be deducted from the clock.  You will also be alerted if your answer is correct or not.  When the timer reaches zero or you have answered all the questions the game will end.  You will then be presented with your final score (20 points for each question), and given the opportunity to enter your name.  Once this is done, click the button to save both your name and score, which will lead to the highscores screen.  From here you can go back to retry the quiz, or clear the scores.  The timer will be displayed in the top right corner of your screen, and in the top left corner will be a persistant link to jump to the highscores section. Enjoy.
 
    
    ![Website Demo Image showing overview of entire website](https://github.com/Stickkman/timedAssessmentQuiz04/blob/main/assets/images/screenshot.jpg?raw=true)
