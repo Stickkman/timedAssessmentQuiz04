@@ -3,7 +3,7 @@
 
 ## Description
 
-This web application is a multiple choice coding quiz that was created to help improve your coding knowledge.  It keeps track of your previous score and name so you can gauge how well you are improving over time.  It can also be used to practice for test questions you might face in interviews, as well as just for trying to improve upon your current knowledge and see how much information you are retaining. This is a timed quiz to simulate so pressure you might face in the real world and for every answer you get wrong time is deducted.   
+This web application is a multiple choice coding quiz that was created to help improve your coding knowledge.  It keeps track of your previous score and name so you can gauge how well you are improving over time.  It can also be used to practice for test questions you might face in interviews, as well as trying to improve upon your previous score and see how much information you are retaining. This is a timed quiz to simulate slight pressure you might face in the real world and for every answer you get wrong time is deducted.   
 
 ## Installation
 
