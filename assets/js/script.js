@@ -23,6 +23,8 @@ var finishContainer = document.querySelector("#finalContainer");
 var finalButton = document.querySelector("#saveInfoButton");
 // selector for final score 
 var scoreDisplay = document.querySelector("#userInfo");
+// view highscores button selector
+var highscoreBtn = document.querySelector("#viewHighscores");
 
 // array of questions
 var questions = [ 
@@ -242,6 +244,8 @@ function renderQuestion() {
 
 // startQuiz function
 function startQuiz() {
+   
+    
     //calls startTimer function
     startTimer();
    
@@ -274,6 +278,7 @@ function startTimer(){
 // runs after timer runs out OR all questions answered
 function finishQuiz(){
     
+    
     //math for score
     var totalScore = correctAnswers * 20;
     //inserts text and final score
@@ -287,21 +292,29 @@ function finishQuiz(){
     finalButton.addEventListener("click", function(event) {
         event.preventDefault(); // prevents page from refreshing
 
-        var name = document.querySelector("#name").value;
-        var score = document.querySelector("#score").value;
+            
+            var inName = document.querySelector("#namee").value;
+            
+            //sets local keys and assigns values
+            localStorage.setItem("name", inName);
+            localStorage.setItem("score", totalScore);
 
-            localStorage.setItem("name", name);
-            localStorage.setItem("score", score);
+            goScores(); // goes to function to load highscores html
     })
     
 
+}
 
-
+function goScores() {
+    window.location.href ="./highscores.html";
 }
 
 
 // call startQuiz funciton when start button is pushed
 startButton.addEventListener("click", startQuiz);
+
+// highscore button listener
+highscoreBtn.addEventListener("click", goScores);
 
 
 

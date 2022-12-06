@@ -1,0 +1,46 @@
+
+body{
+    background-color: black;
+}
+
+h1 {
+    display:flex;
+    color: aqua;
+    font-size: 35px;
+    font-weight: bolder;
+    justify-content: center;
+    
+}
+.scoreContainer {
+    display:flex;
+    margin:auto;
+    justify-content:center;
+    align-content:center;
+    padding: 15px;
+    background-color: aqua;
+    border-radius: 15px;
+    min-height: 200px;
+    max-width: 400px;
+    font-size: 19px;
+    font-weight: bold;
+    border-style: dotted;
+
+}
+
+.btn {
+    
+
+
+}
+
+#hsButtons {
+    display:flex;
+    justify-content: center;
+    padding:15px;
+
+    
+}
+
+#clearBtn {
+    margin-left: 30px;
+}
